@@ -1,0 +1,48 @@
+/* style.css */
+
+/* Add your custom styles here */
+
+/* Example styles */
+
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+/* End of style.css */

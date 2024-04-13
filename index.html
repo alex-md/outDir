@@ -11,23 +11,23 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   </head>
 
-  <body class="bg-light container mx-auto fs-5">
+  <body class="container-fluid justify-content-center w-75">
     <h1 class="display-4 mt-4 pb-5 text-center">outDir</h1>
     <div class="container-fluid d-flex mx-auto p-8 w-75">
-      <div class="text-center">
+      <div class="container-fluid d-grid fs-6 text-center">
         <h1 class=" m-4 p-4">Click the button below to increment the counter.</h1>
         <div class="mt-4 flex justify-center">
-          <button id="increment-button" class="btn btn-dark">
+          <button id="increment-button" class="btn btn-success rounded-pill shadow">
             Increment Counter
           </button>
         </div>
-        <p id="total-clicks" class="text-xl fw-bold"></p>
+        <p id="total-clicks" class="text-xl fw-bold">Total clicks: 222</p>
         <p class="small">Updates in real-time using Firebase</p>
       </div>
       <div class="mt-8 text-center">
         <p id="counter-value" class="text-2xl font-bold text-gray-700"></p>
       </div>
-      <div class="mt-8 text-center">
+      <div class="card-section container-fluid d-table mt-8 text-center">
         <table id="leaderboard" class="w-full border-collapse border border-gray-300">
           <thead>
             <tr>

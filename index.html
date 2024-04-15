@@ -1,51 +1,75 @@
 <html>
 
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>FireClick</title>
-    <meta name="description" content="FireClick outDir is a real-time click counter using Firebase.">
-    <meta name="keywords" content="outDir, Firebase, Real-time, Click Counter, leaderboard">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/css/foundation.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <meta name="description" content="FireClick outDir is a real-time click counter using Firebase." />
+    <meta name="keywords" content="outDir, Firebase, Real-time, Click Counter, leaderboard" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+    <link href="
+https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css
+" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
   </head>
 
-  <body class="container-fluid justify-content-center w-75">
-    <h1 class="display-4 mt-4 pb-5 text-center">outDir</h1>
-    <div class="container-fluid d-flex mx-auto p-8 w-75">
-      <div class="container-fluid d-grid fs-6 text-center">
-        <h1 class=" m-4 p-4">Click the button below to increment the counter.</h1>
-        <div class="mt-4 flex justify-center">
-          <button id="increment-button" class="btn btn-success rounded-pill shadow">
-            Increment Counter
-          </button>
-        </div>
-        <p id="total-clicks" class="text-xl fw-bold">Total clicks: 222</p>
-        <p class="small">Updates in real-time using Firebase</p>
-      </div>
-      <div class="mt-8 text-center">
-        <p id="counter-value" class="text-2xl font-bold text-gray-700"></p>
-      </div>
-      <div class="card-section container-fluid d-table mt-8 text-center">
-        <table id="leaderboard" class="w-full border-collapse border border-gray-300">
-          <thead>
-            <tr>
-              <th class="border border-gray-300 py-2 px-4">Rank</th>
-              <th class="border border-gray-300 py-2 px-4">User <span class="text-muted small">(randomly generated
-                  each session)</span></th>
-              <th class="border border-gray-300 py-2 px-4">Clicks</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </div>
+  <body class="bg-light" style="font-size: 0.9em;">
+    <div class="container-fluid">
+      <header class="d-flex flex-column align-items-center py-2">
+        <h1 class="m-2 lead fs-1">OutDir Fireclicker</h1>
+        <p class="text-muted fs-6">
+          A fun platform for tracking button clicks. Click the button below to join the fun!
+        </p>
+      </header>
+      <main class="container w-75">
+        <div class="row g-3">
+          <div class="col-lg-6">
+            <div class="card shadow-sm">
+              <div class="card-body text-center">
+                <h2 id="totalClicks" class="fs-3 fw-bold" style="font-size: 1.2em;">Loading...
+                </h2>
+                <p class="card-text text-muted">Total clicks across the platform</p>
+                <button class="btn btn-primary w-100" style="padding: 0.5em;">Click me</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h3 class="card-title fw-bold" style="font-size: 1.3em;">Leaderboard</h3>
+                <p class="text-muted mb-2">Enter your name to join the leaderboard</p><span
+                  class="form-select-sm fst-italic text-body-tertiary text-muted">If
+                  you do not enter a name, one will be randomly generated for you</span>
+                <div class="mb-2">
+                  <input type="text" class="form-control" id="leaderboard-name" placeholder="Enter your name"
+                    style="font-size: 0.9em;">
+                  <button class="btn btn-dark my-2 w-100 container-fluid" id="set-name" style="padding: 0.5em;">Set
+                    Name</button>
+                </div>
+                <table class="table" style="font-size: 0.8em;">
+                  <thead>
+                    <tr>
+                      <th scope="col">Rank</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Clicks</th>
+                    </tr>
+                  </thead>
+                  <tbody>
 
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/index.js"></script>
+    </div>
   </body>
 
 </html>

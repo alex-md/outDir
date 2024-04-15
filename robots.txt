@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /bootstrap/
 Disallow: /css/
 Disallow: /js/
-Disallow: /sitemap.xml 
+Allow: /sitemap.xml 

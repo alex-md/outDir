@@ -102,3 +102,17 @@ function generateUsername(uuid) {
 function formatNumberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+// Simulate users clicking the button at random intervals throughout the day
+function simulateUsers() {
+    // Generate a random interval between 1 second and 1 hour
+    const interval = Math.floor(Math.random() * 3600 + 1) * 1000;
+
+    // Set an interval to send a request to the Cloudflare Worker
+    setInterval(() => {
+        fetch('https://fireclicker.vs.workers.dev/').catch(console.error);
+    }, interval);
+}
+
+// Start simulating users
+simulateUsers();

@@ -12,42 +12,73 @@ https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+    <!-- Add Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Roboto Mono', monospace;
+        background: url('https://www.svgbackgrounds.com/#abstract-triangles') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+    </style>
   </head>
 
-  <body class="bg-light" style="font-size: 0.9em;">
+  <body class="bg-light">
     <div class="container-fluid">
-      <header class="d-flex flex-column align-items-center py-2">
-        <h1 class="m-2 lead fs-1">OutDir Fireclicker</h1>
+      <header class="d-flex flex-column align-items-center py-3">
+        <h1 class="m-2 lead fs-1 text-primary">OutDir Fireclicker</h1>
         <p class="text-muted fs-6">
           A fun platform for tracking button clicks. Click the button below to join the fun!
         </p>
       </header>
-      <main class="container w-75">
+      <main class="container">
         <div class="row g-3">
           <div class="col-lg-6">
-            <div class="card shadow-sm">
+            <div class="card shadow">
               <div class="card-body text-center">
-                <h2 id="totalClicks" class="fs-3 fw-bold" style="font-size: 1.2em;">Loading...
-                </h2>
+                <h2 id="totalClicks" class="fs-3 fw-bold text-secondary">Loading...</h2>
                 <p class="card-text text-muted">Total clicks across the platform</p>
-                <button class="btn btn-primary w-100" style="padding: 0.5em;">Click me</button>
+                <button id="increment-button" class="btn btn-primary w-100">Click me</button>
+                <!-- Stats Section -->
+                <!-- <div class="mt-4">
+                  <h3 class="fw-bold text-secondary">Stats</h3>
+                  <p class="text-muted">Interesting stats about the platform</p>
+                  <div class="d-flex justify-content-between text-secondary">
+                    <div>
+                      <h4 id="activeUsers" class="fw-bold">...</h4>
+                      <p class="text-muted">Active Users</p>
+                    </div>
+                    <div>
+                      <h4 id="totalClicksToday" class="fw-bold">...</h4>
+                      <p class="text-muted">Total Clicks Today</p>
+                    </div>
+                    <div>
+                      <h4 id="newUsersToday" class="fw-bold">...</h4>
+                      <p class="text-muted">New Users Today</p>
+                    </div>
+                  </div>
+                </div> -->
+                <!-- End of Stats Section -->
               </div>
             </div>
           </div>
+
           <div class="col-lg-6">
-            <div class="card shadow-sm">
+            <div class="card shadow">
               <div class="card-body">
-                <h3 class="card-title fw-bold" style="font-size: 1.3em;">Leaderboard</h3>
-                <p class="text-muted mb-2">Enter your name to join the leaderboard</p><span
-                  class="form-select-sm fst-italic text-body-tertiary text-muted">If
-                  you do not enter a name, one will be randomly generated for you</span>
+                <h3 class="card-title fw-bold text-secondary">Leaderboard</h3>
+                <p class="text-muted mb-2">Enter your name to join the leaderboard</p>
+                <span class="form-select-sm fst-italic text-muted">If you do not enter a name, one will be
+                  randomly
+                  generated for you</span>
                 <div class="mb-2">
-                  <input type="text" class="form-control" id="leaderboard-name" placeholder="Enter your name"
-                    style="font-size: 0.9em;">
-                  <button class="btn btn-dark my-2 w-100 container-fluid" id="set-name" style="padding: 0.5em;">Set
-                    Name</button>
+                  <input type="text" class="form-control" id="leaderboard-name" placeholder="Enter your name">
+                  <button class="btn btn-dark my-2 w-100" id="set-name">Set Name</button>
                 </div>
-                <table class="table" style="font-size: 0.8em;">
+                <table class="table">
                   <thead>
                     <tr>
                       <th scope="col">Rank</th>
@@ -62,14 +93,12 @@ https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css
               </div>
             </div>
           </div>
-        </div>
       </main>
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
     <script src="./js/index.js"></script>
-    </div>
   </body>
 
 </html>
